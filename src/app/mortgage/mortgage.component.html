@@ -1,0 +1,28 @@
+<div class="header"><h1>Fill in mortgage fields</h1></div>
+<form class="center" [formGroup]="mortgageForm">
+	<div class="container">
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Select bank</mat-label>
+		    <mat-select formControlName="bankID" name="bankID">
+		      <mat-option *ngFor="let bank of banks" [value]="bank.id">
+		        {{bank.name}}
+		      </mat-option>
+		    </mat-select>
+		</mat-form-field>
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Initial loan</mat-label>
+		    <input matInput placeholder="Initial loan" value="" formControlName="initialLoan">
+		</mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Down Payment</mat-label>
+		    <input matInput placeholder="Down payment" value="" formControlName="downPayment">
+		</mat-form-field>
+	</div>
+	<div class="container mt-30 ml-160">
+		<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+	</div>
+    <div class="container mt-30 ml-160">
+		<h1 *ngIf="errorMessage">Error: {{errorMessage}}</h1>
+        <h1 *ngIf="mortgage">Mortgage calculated: {{mortgage}}</h1>
+	</div>
+</form>

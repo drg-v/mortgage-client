@@ -1,0 +1,32 @@
+<div class="header"><h1>Fill in bank fields</h1></div>
+<form class="center" [formGroup]="bankForm">
+	<div class="container">
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Bank name</mat-label>
+		    <input matInput placeholder="Bank name" value="" formControlName="name">
+		</mat-form-field>
+		<mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Interest rate(%)</mat-label>
+		    <input matInput placeholder="Interest rate(%)" value="" formControlName="interestRate">
+		</mat-form-field>
+        </div>
+        <div class="container">
+        <mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Maximum loan</mat-label>
+		    <input matInput placeholder="Maximum loan" value="" formControlName="maxLoan">
+		</mat-form-field>
+        <mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Minimum Down Payment(%)</mat-label>
+		    <input matInput placeholder="Minimum down payment" value="" formControlName="minDownPayment">
+		</mat-form-field>
+        </div>
+        <div class="container">
+        <mat-form-field appearance="outline" class="example-full-width">
+		    <mat-label>Loan term (months)</mat-label>
+		    <input matInput placeholder="Loan term (months)" value="" formControlName="loanTermMonths">
+		</mat-form-field>
+	</div>
+	<div class="container mt-30 ml-160">
+		<button mat-raised-button color="primary" (click)="submit()">Submit</button>
+	</div>
+</form>
