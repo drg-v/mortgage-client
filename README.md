@@ -1,1 +1,1 @@
-# mortgage-client
+# Angular client for Mortgage Calculator application
